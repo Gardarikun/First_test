@@ -1,0 +1,151 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Введите количество чисел в массиве №1.");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[n];
+            Random row = new Random();
+            for (int i = 0; i < n; i++)
+            {
+
+                arr[i] = row.Next(800);
+                Console.Write(arr[i] + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int z = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = z;
+                    }
+                }
+            }
+
+            Console.WriteLine("Введите количество чисел в массиве №2.");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int[] arr1 = new int[n1];
+            for (int i = 0; i < n1; i++)
+            {
+                arr1[i] = row.Next(800);
+                Console.Write(arr1[i] + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                for (int j = 0; j < arr1.Length - 1; j++)
+                {
+                    if (arr1[j] > arr1[j + 1])
+                    {
+                        int z = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = z;
+                    }
+                }
+            }
+
+            Console.WriteLine("Введите количество чисел в массиве №3.");
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int[] arr2 = new int[n2];
+            for (int i = 0; i < n2; i++)
+            {
+                arr2[i] = row.Next(800);
+                Console.Write(arr2[i] + " ");
+
+            }
+            Console.WriteLine();
+
+
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                for (int j = 0; j < arr2.Length - 1; j++)
+                {
+                    if (arr2[j] > arr2[j + 1])
+                    {
+                        int z = arr2[j];
+                        arr2[j] = arr2[j + 1];
+                        arr2[j + 1] = z;
+                    }
+                }
+            }
+
+            Console.WriteLine("Введите количество чисел в массиве №4.");
+            int n3 = Convert.ToInt32(Console.ReadLine());
+            int[] arr3 = new int[n3];
+            for (int i = 0; i < n3; i++)
+            {
+                arr3[i] = row.Next(800);
+                Console.Write(arr3[i] + " ");
+
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < arr3.Length; i++)
+            {
+                for (int j = 0; j < arr3.Length - 1; j++)
+                {
+                    if (arr3[j] > arr3[j + 1])
+                    {
+                        int z = arr3[j];
+                        arr3[j] = arr3[j + 1];
+                        arr3[j + 1] = z;
+                    }
+                }
+            }
+            M1:
+            Console.WriteLine("О каком массиве хотите узнать данные?");
+            int n5 = Convert.ToInt32(Console.ReadLine());
+            if (n5 == 1)
+            {
+                Console.Write("Минимальное значиние =  ");
+                Console.WriteLine(arr[0]);
+                Console.Write("Максимальное значение =  ");
+                Console.WriteLine(arr[n-1]);
+                goto M1;
+            }
+            if (n5 == 2)
+            {
+                Console.Write("Минимальное значиние =  ");
+                Console.WriteLine(arr1[0]);
+                Console.Write("Максимальное значение =  ");
+                Console.WriteLine(arr1[n1 - 1]);
+                goto M1;
+            }
+            if (n5 == 3)
+            {
+                Console.Write("Минимальное значиние =  ");
+                Console.WriteLine(arr2[0]);
+                Console.Write("Максимальное значение =  ");
+                Console.WriteLine(arr2[n2 - 1]);
+                goto M1;
+            }
+            if (n5 == 4)
+            {
+                Console.Write("Минимальное значиние =  ");
+                Console.WriteLine(arr3[0]);
+                Console.Write("Максимальное значение =  ");
+                Console.WriteLine(arr3[n3 - 1]);
+                goto M1;
+            }
+        }
+    }
+}

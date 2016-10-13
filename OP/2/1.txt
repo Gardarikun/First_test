@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array1 = new int[7] { 2, 4, 6, 8, 10, 12, 0};
+            for (int i=0; i < 6; i++)
+            {
+                Console.Write(" " + array1[i]);
+            }
+            Console.WriteLine();
+            array1[6] = array1[5];
+            array1[5] = array1[4];
+            array1[4] = array1[3];
+            array1[3] = 7;
+            for (int i = 0; i < 7; i++)
+            {
+                Console.Write(" " + array1[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
